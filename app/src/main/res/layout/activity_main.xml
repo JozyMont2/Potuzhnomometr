@@ -23,7 +23,19 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="709dp">
+                android:layout_height="1300dp">
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/black_gradient"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline4"
+                    app:layout_constraintTop_toTopOf="@+id/guideline6"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -41,14 +53,14 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="32dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="Вітаю у"
                     android:textColor="#282727"
                     android:textSize="34sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.041"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -70,12 +82,13 @@
                     android:id="@+id/textView6"
                     android:layout_width="232dp"
                     android:layout_height="49dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="2dp"
                     android:text="Застосунок із найбільшою концентрацією потужності"
                     android:textColor="#282727"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.089"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -83,14 +96,46 @@
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Режими:"
+                    android:text="Основні режими:"
                     android:textColor="#282727"
                     android:textSize="28sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Вторинні режими:"
+                    android:textColor="#282727"
+                    android:textSize="28sp"
+                    app:layout_constraintBottom_toTopOf="@+id/view4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Подробиці:"
+                    android:textColor="#282727"
+                    android:textSize="28sp"
+                    app:layout_constraintBottom_toTopOf="@+id/view2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view4"
+                    app:layout_constraintVertical_bias="0.00999999" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline8"
@@ -111,170 +156,252 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.4" />
+                    app:layout_constraintGuide_percent="0.21" />
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.95" />
+                    app:layout_constraintGuide_percent="0.58" />
 
-                <androidx.core.widget.NestedScrollView
+                <View
+                    android:id="@+id/view4"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@drawable/black_gradient"
-                    android:fillViewport="true"
-                    app:layout_constraintBottom_toTopOf="@+id/guideline12"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline2"
                     app:layout_constraintEnd_toStartOf="@+id/guideline9"
                     app:layout_constraintStart_toStartOf="@+id/guideline8"
-                    app:layout_constraintTop_toTopOf="@+id/guideline11">
+                    app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.62" />
 
-                        <androidx.constraintlayout.widget.ConstraintLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.72" />
 
-                            <View
-                                android:id="@+id/view3"
-                                android:layout_width="300dp"
-                                android:layout_height="3dp"
-                                android:layout_marginTop="12dp"
-                                android:background="#403D3D"
-                                app:layout_constraintBottom_toTopOf="@+id/textView9"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.462"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/button3"
-                                app:layout_constraintVertical_bias="0.0" />
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="175dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/purple_button"
+                    android:text="Докладніше"
+                    android:textColor="#2C2A2A"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    app:layout_constraintStart_toStartOf="@+id/guideline4"
+                    app:layout_constraintTop_toTopOf="@+id/view2" />
 
-                            <Button
-                                android:id="@+id/button"
-                                android:layout_width="300dp"
-                                android:layout_height="75dp"
-                                android:layout_marginTop="12dp"
-                                android:backgroundTint="#499E4C"
-                                android:text="Потужномометр"
-                                android:textSize="16sp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="175dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/purple_button"
+                    android:text="Про застосунок"
+                    android:textColor="#2C2A2A"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    app:layout_constraintStart_toStartOf="@+id/view2"
+                    app:layout_constraintTop_toBottomOf="@+id/button7" />
 
-                            <TextView
-                                android:id="@+id/textView5"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="28dp"
-                                android:text="Виміряти концентрацію зради в повітрі"
-                                android:textColor="#FBF7F7"
-                                android:textSize="15sp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/button" />
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="175dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/purple_button"
+                    android:text="Про розробника"
+                    android:textColor="#2C2A2A"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                    app:layout_constraintStart_toStartOf="@+id/guideline4"
+                    app:layout_constraintTop_toBottomOf="@+id/button5" />
 
-                            <TextView
-                                android:id="@+id/textView3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="sans-serif"
-                                android:text="Виміряти конценртацію потужності в повітрі"
-                                android:textColor="#FBF7F7"
-                                android:textSize="15sp"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.488"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.04000002" />
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/black_gradient"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline12"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toTopOf="@+id/guideline11"
+                    app:layout_constraintVertical_bias="0.0" />
 
-                            <TextView
-                                android:id="@+id/textView8"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="28dp"
-                                android:text="Зрада/перемога (рандромайзер)"
-                                android:textColor="#FBF7F7"
-                                android:textSize="15sp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/button2" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.76" />
 
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="28dp"
-                                android:text="Тест на рівень концетрації потужності в собі"
-                                android:textColor="#FBF7F7"
-                                android:textSize="15sp"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintHorizontal_bias="0.504"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/button3" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.97" />
 
-                            <Button
-                                android:id="@+id/button2"
-                                android:layout_width="300dp"
-                                android:layout_height="75dp"
-                                android:layout_marginTop="12dp"
-                                android:backgroundTint="#F44336"
-                                android:text="Зрадомометр"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.23" />
 
-                            <Button
-                                android:id="@+id/button3"
-                                android:layout_width="300dp"
-                                android:layout_height="75dp"
-                                android:layout_marginTop="12dp"
-                                android:backgroundTint="#FF9800"
-                                android:text="Зрада/перемога"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.77" />
 
-                            <Button
-                                android:id="@+id/button4"
-                                android:layout_width="300dp"
-                                android:layout_height="75dp"
-                                android:layout_marginTop="12dp"
-                                android:backgroundTint="#8027B0"
-                                android:text="Тест на потужність"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Виміряти концентрацію потужності в повітрі:"
+                    android:textColor="#FDFBFB"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toTopOf="@+id/view" />
 
-                            <View
-                                android:id="@+id/view"
-                                android:layout_width="300dp"
-                                android:layout_height="3dp"
-                                android:background="#403D3D"
-                                app:layout_constraintBottom_toTopOf="@+id/textView5"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/button" />
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Виміряти концентрацію зради в повітрі:"
+                    android:textColor="#FDFBFB"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/view3" />
 
-                            <View
-                                android:id="@+id/view2"
-                                android:layout_width="300dp"
-                                android:layout_height="3dp"
-                                android:layout_marginTop="12dp"
-                                android:background="#403D3D"
-                                app:layout_constraintBottom_toTopOf="@+id/textView8"
-                                app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/button2"
-                                app:layout_constraintVertical_bias="0.0" />
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Зрада/перемога(рандомайзер)"
+                    android:textColor="#FDFBFB"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/view5" />
 
-                        </androidx.constraintlayout.widget.ConstraintLayout>
-                    </LinearLayout>
-                </androidx.core.widget.NestedScrollView>
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Тест на рівень концентрації потужності"
+                    android:textColor="#FDFBFB"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="275dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#454343"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/button" />
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="275dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#454343"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="275dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#454343"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/green_button"
+                    android:text="Потужномометр"
+                    android:textColor="#2C2A2A"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintHorizontal_bias="0.504"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/red_button"
+                    android:text="Button"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/red_button"
+                    android:text="Зрадомометр"
+                    android:textColor="#2C2A2A"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/green_red_button"
+                    android:text="Зрада/перемога"
+                    android:textColor="#2C2A2A"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="250dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/purple_button"
+                    android:text="Тест на потужність"
+                    android:textColor="#2C2A2A"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline9"
+                    app:layout_constraintStart_toStartOf="@+id/guideline8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
