@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63"
+        app:layout_constraintVertical_bias="0.622"
         app:layout_constraintWidth_percent="0.9" />
 
     <View
@@ -117,7 +117,7 @@
         app:layout_constraintStart_toStartOf="@+id/view13"
         app:layout_constraintTop_toTopOf="@+id/view13"
         app:layout_constraintVertical_bias="0.060000002"
-        app:layout_constraintWidth_percent="0.11" />
+        app:layout_constraintWidth_percent="0.14" />
 
     <View
         android:id="@+id/view12"
@@ -169,11 +169,11 @@
         app:layout_constraintBottom_toBottomOf="@+id/view12"
         app:layout_constraintEnd_toEndOf="@+id/view12"
         app:layout_constraintHeight_percent="0.025"
-        app:layout_constraintHorizontal_bias="0.379"
-        app:layout_constraintStart_toStartOf="@+id/view12"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
         app:layout_constraintTop_toTopOf="@+id/view12"
-        app:layout_constraintVertical_bias="0.087"
-        app:layout_constraintWidth_percent="0.045" />
+        app:layout_constraintVertical_bias="0.07999998"
+        app:layout_constraintWidth_percent="0.052" />
 
     <Button
         android:id="@+id/button_red"
@@ -184,11 +184,11 @@
         app:layout_constraintBottom_toBottomOf="@+id/view10"
         app:layout_constraintEnd_toEndOf="@+id/view10"
         app:layout_constraintHeight_percent="0.15"
-        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintHorizontal_bias="0.911"
         app:layout_constraintStart_toStartOf="@+id/view10"
         app:layout_constraintTop_toTopOf="@+id/view10"
         app:layout_constraintVertical_bias="0.947"
-        app:layout_constraintWidth_percent="0.3" />
+        app:layout_constraintWidth_percent="0.35" />
 
     <Button
         android:id="@+id/button_mode"
@@ -221,17 +221,49 @@
         app:layout_constraintVertical_bias="0.07999998" />
 
     <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Min"
+        android:textColor="#FDFAFA"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view13"
+        app:layout_constraintEnd_toEndOf="@+id/view13"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="@+id/view13"
+        app:layout_constraintTop_toTopOf="@+id/view13"
+        app:layout_constraintVertical_bias="0.979" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="Max"
+        android:textColor="#FDFAFA"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view13"
+        app:layout_constraintEnd_toEndOf="@+id/view13"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="@+id/view13"
+        app:layout_constraintTop_toTopOf="@+id/view13"
+        app:layout_constraintVertical_bias="0.979" />
+
+    <TextView
         android:id="@+id/textView_emoji"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="😪"
         android:textColor="#FDFAFA"
-        android:textSize="22sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@+id/view14"
         app:layout_constraintEnd_toEndOf="@+id/view14"
+        app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="@+id/view14"
-        app:layout_constraintTop_toTopOf="@+id/view14" />
+        app:layout_constraintTop_toTopOf="@+id/view14"
+        app:layout_constraintVertical_bias="0.466" />
 
     <TextView
         android:id="@+id/textView22"
@@ -296,7 +328,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="100"
+        android:text="0"
         android:textColor="#FDFAFA"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/view16"
@@ -631,11 +663,11 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/black_gradient"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintHorizontal_bias="0.965"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.15" />
+        app:layout_constraintWidth_percent="0.16" />
 
     <View
         android:id="@+id/view20"
@@ -644,11 +676,11 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/black_gradient"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.15" />
+        app:layout_constraintWidth_percent="0.16" />
 
     <ImageView
         android:id="@+id/imageView_preference"
@@ -673,5 +705,18 @@
         app:layout_constraintTop_toTopOf="@+id/view20"
         app:layout_constraintWidth_percent="0.08"
         app:srcCompat="@drawable/icons8_u______100__1_" />
+
+    <View
+        android:id="@+id/view21"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/white_view"
+        app:layout_constraintBottom_toBottomOf="@+id/view13"
+        app:layout_constraintEnd_toEndOf="@+id/view13"
+        app:layout_constraintHeight_percent="0.005"
+        app:layout_constraintStart_toStartOf="@+id/view13"
+        app:layout_constraintTop_toTopOf="@+id/view13"
+        app:layout_constraintVertical_bias="0.953"
+        app:layout_constraintWidth_percent="0.45" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

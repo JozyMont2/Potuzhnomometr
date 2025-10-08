@@ -1,7 +1,6 @@
 package com.example.potuzhnomometr
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -11,9 +10,9 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 class Potuzhnomometr : AppCompatActivity() {
-
     private var currentValue = 0
     private var isPressed = false
     private val handler = Handler(Looper.getMainLooper())
@@ -28,59 +27,65 @@ class Potuzhnomometr : AppCompatActivity() {
         val back: ImageView = findViewById(R.id.imageView_back)
         val measureView: View = findViewById(R.id.view_measure)
 
-        val dial = mutableListOf<View>()
-        for (i in 1..20) {
-            val resId = resources.getIdentifier("view_$i", "id", packageName)
-            val view = findViewById<View>(resId)
-            dial.add(view)
-        }
+        val dial = listOf(
+            findViewById<View>(R.id.view_1), findViewById(R.id.view_2), findViewById(R.id.view_3),
+            findViewById(R.id.view_4), findViewById(R.id.view_5), findViewById(R.id.view_6),
+            findViewById(R.id.view_7), findViewById(R.id.view_8), findViewById(R.id.view_9),
+            findViewById(R.id.view_10), findViewById(R.id.view_11), findViewById(R.id.view_12),
+            findViewById(R.id.view_13), findViewById(R.id.view_14), findViewById(R.id.view_15),
+            findViewById(R.id.view_16), findViewById(R.id.view_17), findViewById(R.id.view_18),
+            findViewById(R.id.view_19), findViewById(R.id.view_20)
+        )
 
-        back.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        fun updateUI() {
+        val updateUI = {
             valueText.text = currentValue.toString()
+
+            emojiText.text = when (currentValue) {
+                in 0..20 -> "😪"
+                in 21..40 -> "🥱"
+                in 41..60 -> "😐"
+                in 61..80 -> "😮"
+                in 81..99 -> "🤯"
+                100 -> "💀"
+                else -> "💀"
+            }
 
             val activeBars = currentValue / 5
             for (i in dial.indices) {
                 if (i < activeBars) {
-                    dial[i].setBackgroundColor(Color.RED)
+                    dial[i].setBackgroundResource(R.drawable.green_view)
                 } else {
-                    dial[i].setBackgroundColor(Color.GRAY)
+                    dial[i].setBackgroundResource(R.drawable.white_view)
                 }
             }
 
             if (isPressed) {
-                measureView.setBackgroundResource(R.drawable.green)
+                measureView.setBackgroundResource(R.drawable.green_view)
             } else {
                 measureView.setBackgroundResource(R.drawable.rounded4)
             }
+        }
+        updateUI()
 
-            emojiText.text = when (currentValue) {
-                in 0..19 -> "😪"
-                in 20..39 -> "🥱"
-                in 40..59 -> "😐"
-                in 60..79 -> "😮"
-                in 80..99 -> "🤯"
-                100 -> "💀"
-                else -> ""
+        val increaseRunnable = object : Runnable {
+            override fun run() {
+                if (isPressed && currentValue < 100) {
+                    currentValue++
+                    updateUI()
+                    handler.postDelayed(this, 50)
+                }
             }
-
-            measureView.setBackgroundColor(
-                Color.argb(255, currentValue * 2, 50, 150)
-            )
         }
 
-        val runnable = object : Runnable {
+        val decreaseRunnable = object : Runnable {
             override fun run() {
-                if (isPressed && currentValue < 100) currentValue++
-                else if (!isPressed && currentValue > 0) currentValue--
-
-                updateUI()
-                handler.postDelayed(this, 50)
+                if (!isPressed && currentValue > 0) {
+                    currentValue--
+                    updateUI()
+                    handler.postDelayed(this, 50)
+                } else {
+                    handler.removeCallbacks(this)
+                }
             }
         }
 
@@ -88,13 +93,32 @@ class Potuzhnomometr : AppCompatActivity() {
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     isPressed = true
-                    handler.post(runnable)
+                    handler.removeCallbacks(decreaseRunnable)
+                    handler.post(increaseRunnable)
+                    updateUI()
+                    true
                 }
                 MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                     isPressed = false
+                    handler.removeCallbacks(increaseRunnable)
+                    handler.post(decreaseRunnable)
+                    updateUI()
+                    true
                 }
+                else -> false
             }
-            true
+        }
+
+        back.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
     }
 }

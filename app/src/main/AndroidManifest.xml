@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Potuzhnomometr">
         <activity
+            android:name=".Potuzhnomometr2"
+            android:exported="false" />
+        <activity
             android:name=".Potuzhnomometr"
             android:exported="false" />
         <activity

@@ -28,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         val aboutApp: Button = findViewById(R.id.button_about_app)
         val aboutDeveloper: Button = findViewById(R.id.button_about_developer)
 
+        ptzhn.setOnClickListener {
+            val intent = Intent(this, Potuzhnomometr::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
