@@ -9,6 +9,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -22,6 +24,8 @@ class Potuzhnomometr : AppCompatActivity() {
         setContentView(R.layout.activity_potuzhnomometr)
 
         val redButton: Button = findViewById(R.id.button_red)
+        val modeButton: Button = findViewById(R.id.button_mode)
+        val modeText: TextView = findViewById(R.id.textView_mode)
         val valueText: TextView = findViewById(R.id.textView_value)
         val emojiText: TextView = findViewById(R.id.textView_emoji)
         val back: ImageView = findViewById(R.id.imageView_back)
@@ -60,7 +64,7 @@ class Potuzhnomometr : AppCompatActivity() {
             }
 
             if (isPressed) {
-                measureView.setBackgroundResource(R.drawable.green_view)
+                measureView.setBackgroundResource(R.drawable.green)
             } else {
                 measureView.setBackgroundResource(R.drawable.rounded4)
             }
@@ -76,7 +80,6 @@ class Potuzhnomometr : AppCompatActivity() {
                 }
             }
         }
-
         val decreaseRunnable = object : Runnable {
             override fun run() {
                 if (!isPressed && currentValue > 0) {
@@ -107,6 +110,33 @@ class Potuzhnomometr : AppCompatActivity() {
                 }
                 else -> false
             }
+        }
+
+        modeButton.setOnClickListener {
+            val dialogeView = layoutInflater.inflate(R.layout.mods, null)
+            val dialog = AlertDialog.Builder(this)
+                .setView(dialogeView)
+                .create()
+            dialogeView.findViewById<ImageView>(R.id.imageView_closewindow).setOnClickListener {
+                dialog.dismiss()
+            }
+            dialogeView.findViewById<Button>(R.id.buttonmode_ytumannya).setOnClickListener {
+                dialog.dismiss()
+                Toast.makeText(this, "Поточний режим: Утримання", Toast.LENGTH_LONG).show()
+                modeText.text = "Утримання"
+            }
+            dialogeView.findViewById<Button>(R.id.buttonmode_random).setOnClickListener {
+                dialog.dismiss()
+                Toast.makeText(this, "Поточний режим: Рандом", Toast.LENGTH_LONG).show()
+                modeText.text = "Рандом"
+            }
+            dialogeView.findViewById<Button>(R.id.buttonmode_rychnuy).setOnClickListener {
+                dialog.dismiss()
+                Toast.makeText(this, "Поточний режим: Ручний", Toast.LENGTH_LONG).show()
+                modeText.text = "Ручний"
+            }
+
+            dialog.show()
         }
 
         back.setOnClickListener {
