@@ -15,27 +15,13 @@
         android:background="@drawable/rounded4">
 
         <TextView
-            android:id="@+id/textView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:text="Вибір режима"
-            android:textColor="#FDFBFB"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.031" />
-
-        <TextView
             android:id="@+id/textView30"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
             android:text="Вибір режима"
             android:textColor="#FDFBFB"
-            android:textSize="34sp"
+            android:textSize="28sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +38,7 @@
             app:layout_constraintHeight_percent="0.01"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.120000005"
+            app:layout_constraintVertical_bias="0.100000024"
             app:layout_constraintWidth_percent="0.6" />
 
         <View
@@ -101,7 +87,7 @@
 
         <TextView
             android:id="@+id/textView27"
-            android:layout_width="287dp"
+            android:layout_width="285dp"
             android:layout_height="75dp"
             android:fontFamily="monospace"
             android:gravity="center"
@@ -117,7 +103,7 @@
 
         <TextView
             android:id="@+id/textView28"
-            android:layout_width="287dp"
+            android:layout_width="285dp"
             android:layout_height="75dp"
             android:fontFamily="monospace"
             android:gravity="center"
@@ -133,8 +119,8 @@
 
         <TextView
             android:id="@+id/textView29"
-            android:layout_width="287dp"
-            android:layout_height="85dp"
+            android:layout_width="285dp"
+            android:layout_height="75dp"
             android:fontFamily="monospace"
             android:gravity="center"
             android:text="Ручний контроль концетрації потужності, за допомогою повзунка, який з'являється внизу прилада."
@@ -152,21 +138,23 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/color_for_buttons"
             android:text="Утримання"
             app:layout_constraintBottom_toBottomOf="@+id/view27"
             app:layout_constraintEnd_toEndOf="@+id/view27"
             app:layout_constraintHeight_percent="0.09"
-            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="@+id/view27"
             app:layout_constraintTop_toBottomOf="@+id/textView27"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="1.0"
             app:layout_constraintWidth_percent="0.5" />
 
         <Button
             android:id="@+id/buttonmode_random"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/color_for_buttons"
             android:text="Рандом"
             app:layout_constraintBottom_toBottomOf="@+id/view28"
@@ -175,13 +163,14 @@
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="@+id/view28"
             app:layout_constraintTop_toBottomOf="@+id/textView28"
-            app:layout_constraintVertical_bias="0.43"
+            app:layout_constraintVertical_bias="1.0"
             app:layout_constraintWidth_percent="0.5" />
 
         <Button
             android:id="@+id/buttonmode_rychnuy"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/color_for_buttons"
             android:text="Ручний"
             app:layout_constraintBottom_toBottomOf="@+id/view29"
@@ -189,6 +178,7 @@
             app:layout_constraintHeight_percent="0.09"
             app:layout_constraintStart_toStartOf="@+id/view29"
             app:layout_constraintTop_toBottomOf="@+id/textView29"
+            app:layout_constraintVertical_bias="1.0"
             app:layout_constraintWidth_percent="0.5" />
 
         <ImageView

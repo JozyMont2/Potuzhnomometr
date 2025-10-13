@@ -16,6 +16,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 class Potuzhnomometr : AppCompatActivity() {
+    private var growthDelay = 85L
+
+    private var fallDelay = 85L
     private var currentValue = 0
     private var isPressed = false
     private val handler = Handler(Looper.getMainLooper())
@@ -78,16 +81,17 @@ class Potuzhnomometr : AppCompatActivity() {
                 if (isPressed && currentValue < 100) {
                     currentValue++
                     updateUI()
-                    handler.postDelayed(this, 50)
+                    handler.postDelayed(this, growthDelay)
                 }
             }
         }
+
         val decreaseRunnable = object : Runnable {
             override fun run() {
                 if (!isPressed && currentValue > 0) {
                     currentValue--
                     updateUI()
-                    handler.postDelayed(this, 50)
+                    handler.postDelayed(this, fallDelay)
                 } else {
                     handler.removeCallbacks(this)
                 }
@@ -146,8 +150,67 @@ class Potuzhnomometr : AppCompatActivity() {
             val dialog2 = AlertDialog.Builder(this)
                 .setView(dialogView2)
                 .create()
+
             dialogView2.findViewById<ImageView>(R.id.imageView_closewindow3).setOnClickListener {
                 dialog2.dismiss()
+            }
+
+            val growViews = listOf(
+                dialogView2.findViewById<View>(R.id.view1_1),
+                dialogView2.findViewById<View>(R.id.view2_2),
+                dialogView2.findViewById<View>(R.id.view3_3),
+                dialogView2.findViewById<View>(R.id.view4_4)
+            )
+
+            val fallViews = listOf(
+                dialogView2.findViewById<View>(R.id.view11_11),
+                dialogView2.findViewById<View>(R.id.view22_22),
+                dialogView2.findViewById<View>(R.id.view33_33),
+                dialogView2.findViewById<View>(R.id.view44_44)
+            )
+
+            fun setupGroupClick(views: List<View>) {
+                for (v in views) {
+                    v.setOnClickListener {
+                        for (other in views) {
+                            other.setBackgroundResource(R.drawable.rounded2)
+                        }
+                        v.setBackgroundResource(R.drawable.background_for_preferanceview)
+                    }
+                }
+            }
+
+            setupGroupClick(growViews)
+            setupGroupClick(fallViews)
+
+            growViews.forEachIndexed { index, v ->
+                v.setOnClickListener {
+                    growViews.forEach { it.setBackgroundResource(R.drawable.rounded2) }
+                    v.setBackgroundResource(R.drawable.background_for_preferanceview)
+
+                    growthDelay = when (index) {
+                        0 -> 100L
+                        1 -> 70L
+                        2 -> 40L
+                        3 -> 20L
+                        else -> 85L
+                    }
+                }
+            }
+
+            fallViews.forEachIndexed { index, v ->
+                v.setOnClickListener {
+                    fallViews.forEach { it.setBackgroundResource(R.drawable.rounded2) }
+                    v.setBackgroundResource(R.drawable.background_for_preferanceview)
+
+                    fallDelay = when (index) {
+                        0 -> 100L
+                        1 -> 70L
+                        2 -> 40L
+                        3 -> 20L
+                        else -> 85L
+                    }
+                }
             }
             dialog2.show()
         }
