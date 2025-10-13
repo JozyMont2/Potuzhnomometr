@@ -1,6 +1,7 @@
 package com.example.potuzhnomometr
 
 import android.content.Intent
+import android.media.Image
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -29,6 +30,7 @@ class Potuzhnomometr : AppCompatActivity() {
         val valueText: TextView = findViewById(R.id.textView_value)
         val emojiText: TextView = findViewById(R.id.textView_emoji)
         val back: ImageView = findViewById(R.id.imageView_back)
+        val preference: ImageView = findViewById(R.id.imageView_preference)
         val measureView: View = findViewById(R.id.view_measure)
 
         val dial = listOf(
@@ -122,21 +124,32 @@ class Potuzhnomometr : AppCompatActivity() {
             }
             dialogeView.findViewById<Button>(R.id.buttonmode_ytumannya).setOnClickListener {
                 dialog.dismiss()
-                Toast.makeText(this, "Поточний режим: Утримання", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Поточний режим: Утримання", Toast.LENGTH_SHORT).show()
                 modeText.text = "Утримання"
             }
             dialogeView.findViewById<Button>(R.id.buttonmode_random).setOnClickListener {
                 dialog.dismiss()
-                Toast.makeText(this, "Поточний режим: Рандом", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Поточний режим: Рандом", Toast.LENGTH_SHORT).show()
                 modeText.text = "Рандом"
             }
             dialogeView.findViewById<Button>(R.id.buttonmode_rychnuy).setOnClickListener {
                 dialog.dismiss()
-                Toast.makeText(this, "Поточний режим: Ручний", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Поточний режим: Ручний", Toast.LENGTH_SHORT).show()
                 modeText.text = "Ручний"
             }
 
             dialog.show()
+        }
+
+        preference.setOnClickListener {
+            val dialogView2 = layoutInflater.inflate(R.layout.preference, null)
+            val dialog2 = AlertDialog.Builder(this)
+                .setView(dialogView2)
+                .create()
+            dialogView2.findViewById<ImageView>(R.id.imageView_closewindow3).setOnClickListener {
+                dialog2.dismiss()
+            }
+            dialog2.show()
         }
 
         back.setOnClickListener {
