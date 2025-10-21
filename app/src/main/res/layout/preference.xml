@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00FDFBFB"
+    android:backgroundTint="#00FFFDFD"
     android:gravity="center">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,19 +20,19 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.1"
-            app:layout_constraintHorizontal_bias="0.942"
+            app:layout_constraintHorizontal_bias="0.943"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.046"
+            app:layout_constraintVertical_bias="0.069"
             app:layout_constraintWidth_percent="0.1"
-            app:srcCompat="@drawable/icons8_multiplication_100__1_" />
+            app:srcCompat="@drawable/icons8___50" />
 
         <View
             android:id="@+id/view31"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="48dp"
-            android:background="@drawable/rounded3"
+            android:background="@drawable/mods_view"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.25"
@@ -44,7 +46,7 @@
             android:id="@+id/view32"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@drawable/rounded3"
+            android:background="@drawable/mods_view"
             app:layout_constraintBottom_toTopOf="@+id/view31"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.25"
@@ -74,7 +76,7 @@
             android:fontFamily="sans-serif-medium"
             android:text="Вибір швидкості"
             android:textColor="#FDFBFB"
-            android:textSize="28sp"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
