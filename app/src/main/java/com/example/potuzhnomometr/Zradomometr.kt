@@ -6,7 +6,12 @@ import android.os.Handler
 import android.os.Looper
 import android.view.MotionEvent
 import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.SeekBar
+import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -34,7 +39,8 @@ class Zradomometr : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_potuzhnomometr)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_zradomometr)
 
         redButton = findViewById(R.id.button_red)
         modeButton = findViewById(R.id.button_mode)
@@ -62,7 +68,7 @@ class Zradomometr : AppCompatActivity() {
         val updateUI = {
             measureView.setBackgroundResource(
                 if (currentValue > 0) {
-                    R.drawable.green
+                    R.drawable.red2
                 } else {
                     R.drawable.rounded4
                 }
@@ -81,7 +87,7 @@ class Zradomometr : AppCompatActivity() {
             val activeBars = currentValue / 5
             for (i in dial.indices) {
                 dial[i].setBackgroundResource(
-                    if (i < activeBars) R.drawable.green_view else R.drawable.white_view
+                    if (i < activeBars) R.drawable.red_view else R.drawable.white_view
                 )
             }
         }
@@ -109,8 +115,7 @@ class Zradomometr : AppCompatActivity() {
 
         redButton.setOnTouchListener { _, event ->
             when (currentMode) {
-
-                Mode.HOLD -> {
+                Zradomometr.Mode.HOLD -> {
                     when (event.action) {
                         MotionEvent.ACTION_DOWN -> {
                             isPressed = true
@@ -128,7 +133,7 @@ class Zradomometr : AppCompatActivity() {
                     true
                 }
 
-                Mode.RANDOM -> {
+                Zradomometr.Mode.RANDOM -> {
                     if (event.action == MotionEvent.ACTION_DOWN) {
                         val randomValue = Random.nextInt(0, 100)
                         currentValue = randomValue
@@ -137,14 +142,13 @@ class Zradomometr : AppCompatActivity() {
                     }
                     true
                 }
-
-                Mode.MANUAL -> true
+                Zradomometr.Mode.MANUAL -> true
             }
         }
 
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(sb: SeekBar?, progress: Int, fromUser: Boolean) {
-                if (currentMode == Mode.MANUAL) {
+                if (currentMode == Zradomometr.Mode.MANUAL) {
                     currentValue = progress
                     updateUI()
                 }
@@ -162,15 +166,15 @@ class Zradomometr : AppCompatActivity() {
             }
 
             dialogView.findViewById<Button>(R.id.buttonmode_ytumannya).setOnClickListener {
-                setMode(Mode.HOLD, "Утримання", dialog)
+                setMode(Zradomometr.Mode.HOLD, "Утримання", dialog)
             }
 
             dialogView.findViewById<Button>(R.id.buttonmode_random).setOnClickListener {
-                setMode(Mode.RANDOM, "Рандом", dialog)
+                setMode(Zradomometr.Mode.RANDOM, "Рандом", dialog)
             }
 
             dialogView.findViewById<Button>(R.id.buttonmode_rychnuy).setOnClickListener {
-                setMode(Mode.MANUAL, "Ручний", dialog)
+                setMode(Zradomometr.Mode.MANUAL, "Ручний", dialog)
             }
 
             dialog.show()
@@ -199,25 +203,25 @@ class Zradomometr : AppCompatActivity() {
         }
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
-
-    private fun setMode(mode: Mode, label: String, dialog: AlertDialog) {
+    private fun setMode(mode: Zradomometr.Mode, label: String, dialog: AlertDialog) {
         currentMode = mode
         dialog.dismiss()
         modeText.text = label
         Toast.makeText(this, "Поточний режим: $label", Toast.LENGTH_SHORT).show()
 
         when (mode) {
-            Mode.HOLD, Mode.RANDOM -> {
+            Zradomometr.Mode.HOLD, Zradomometr.Mode.RANDOM -> {
                 redButton.visibility = View.VISIBLE
                 seekBar.visibility = View.GONE
                 emojiText.text = "😪"
                 for (i in dial.indices){
                     dial[i].setBackgroundResource(R.drawable.white_view)
                 }
+                measureView.setBackgroundResource(R.drawable.rounded4)
                 currentValue = 0
                 valueText.text = "0"
             }
-            Mode.MANUAL -> {
+            Zradomometr.Mode.MANUAL -> {
                 redButton.visibility = View.GONE
                 seekBar.visibility = View.VISIBLE
                 seekBar.progress = currentValue
@@ -225,6 +229,7 @@ class Zradomometr : AppCompatActivity() {
                 for (i in dial.indices){
                     dial[i].setBackgroundResource(R.drawable.white_view)
                 }
+                measureView.setBackgroundResource(R.drawable.rounded4)
                 currentValue = 0
                 valueText.text = "0"
             }

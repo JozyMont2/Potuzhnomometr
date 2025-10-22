@@ -140,7 +140,7 @@
             android:gravity="center"
             android:text="Ручний контроль концетрації потужності, за допомогою повзунка, який з'являється внизу прилада."
             android:textColor="#FDFCFC"
-            android:textSize="12sp"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="@+id/view29"
             app:layout_constraintEnd_toEndOf="@+id/view29"
             app:layout_constraintHorizontal_bias="0.473"

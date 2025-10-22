@@ -200,24 +200,25 @@ class Potuzhnomometr : AppCompatActivity() {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
-    private fun setMode(mode: Mode, label: String, dialog: AlertDialog) {
+    private fun setMode(mode: Potuzhnomometr.Mode, label: String, dialog: AlertDialog) {
         currentMode = mode
         dialog.dismiss()
         modeText.text = label
         Toast.makeText(this, "Поточний режим: $label", Toast.LENGTH_SHORT).show()
 
         when (mode) {
-            Mode.HOLD, Mode.RANDOM -> {
+            Potuzhnomometr.Mode.HOLD, Potuzhnomometr.Mode.RANDOM -> {
                 redButton.visibility = View.VISIBLE
                 seekBar.visibility = View.GONE
                 emojiText.text = "😪"
                 for (i in dial.indices){
                     dial[i].setBackgroundResource(R.drawable.white_view)
                 }
+                measureView.setBackgroundResource(R.drawable.rounded4)
                 currentValue = 0
                 valueText.text = "0"
             }
-            Mode.MANUAL -> {
+            Potuzhnomometr.Mode.MANUAL -> {
                 redButton.visibility = View.GONE
                 seekBar.visibility = View.VISIBLE
                 seekBar.progress = currentValue
@@ -225,6 +226,7 @@ class Potuzhnomometr : AppCompatActivity() {
                 for (i in dial.indices){
                     dial[i].setBackgroundResource(R.drawable.white_view)
                 }
+                measureView.setBackgroundResource(R.drawable.rounded4)
                 currentValue = 0
                 valueText.text = "0"
             }

@@ -29,14 +29,14 @@ class MainActivity : AppCompatActivity() {
         val aboutDeveloper: Button = findViewById(R.id.button_about_developer)
 
         ptzhn.setOnClickListener {
-            val intent = Intent(this, Potuzhnomometr::class.java)
-            startActivity(intent)
+            val intent_one = Intent(this, Potuzhnomometr::class.java)
+            startActivity(intent_one)
             finish()
         }
 
         zrd.setOnClickListener {
-            val intent = Intent(this, Zradomometr::class.java)
-            startActivity(intent)
+            val intent_two = Intent(this, Zradomometr::class.java)
+            startActivity(intent_two)
             finish()
         }
 
