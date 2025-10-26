@@ -18,12 +18,12 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="1400dp"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="1300dp">
+                android:layout_height="1350dp">
 
                 <TextView
                     android:id="@+id/textView"
@@ -55,18 +55,48 @@
 
                 <TextView
                     android:id="@+id/textView4"
-                    android:layout_width="142dp"
-                    android:layout_height="45dp"
+                    android:layout_width="244dp"
+                    android:layout_height="37dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="24dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Режими:"
+                    android:text="Основні режими:"
                     android:textColor="#050505"
-                    android:textSize="34sp"
+                    android:textSize="30sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.466"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="238dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Побічні режими:"
+                    android:textColor="#050505"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.445"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="155dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Подробиці"
+                    android:textColor="#050505"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.466"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view6" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -88,10 +118,83 @@
                     android:layout_marginTop="16dp"
                     android:background="@drawable/black_gradient"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.425"
+                    app:layout_constraintHeight_percent="0.41"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView4"
                     app:layout_constraintWidth_percent="0.9" />
+
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/black_gradient"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.115"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6"
+                    app:layout_constraintWidth_percent="0.9" />
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_6"
+                    app:layout_constraintBottom_toBottomOf="@+id/view6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.075"
+                    app:layout_constraintHorizontal_bias="0.881"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6"
+                    app:layout_constraintVertical_bias="0.050000012"
+                    app:layout_constraintWidth_percent="0.26" />
+
+                <View
+                    android:id="@+id/view9"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/black_gradient"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    app:layout_constraintVertical_bias="0.3"
+                    app:layout_constraintWidth_percent="0.65" />
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_6"
+                    app:layout_constraintBottom_toBottomOf="@+id/view6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.075"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6"
+                    app:layout_constraintVertical_bias="0.050000012"
+                    app:layout_constraintWidth_percent="0.26" />
+
+                <View
+                    android:id="@+id/view8"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_6"
+                    app:layout_constraintBottom_toBottomOf="@+id/view6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.075"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6"
+                    app:layout_constraintVertical_bias="0.050000012"
+                    app:layout_constraintWidth_percent="0.26" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -140,7 +243,7 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:text="Тест на потужність - превірь свій рівень потужності"
+                    android:text="Тест на потужність - перевірь рівень концентрації потужності"
                     android:textColor="#FBF8F8"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="@+id/view"
@@ -192,13 +295,55 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView8"
                     app:layout_constraintWidth_percent="0.6" />
 
+                <ImageView
+                    android:id="@+id/imageView_chilomometr"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/image_radius"
+                    android:clipToOutline="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/view5"
+                    app:layout_constraintEnd_toEndOf="@+id/view5"
+                    app:layout_constraintHeight_percent="0.059"
+                    app:layout_constraintStart_toStartOf="@+id/view5"
+                    app:layout_constraintTop_toTopOf="@+id/view5"
+                    app:layout_constraintWidth_percent="0.2"
+                    app:srcCompat="@drawable/___6_" />
+
+                <ImageView
+                    android:id="@+id/imageView_krinzhomometr"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/image_radius"
+                    android:clipToOutline="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/view8"
+                    app:layout_constraintEnd_toEndOf="@+id/view8"
+                    app:layout_constraintHeight_percent="0.059"
+                    app:layout_constraintStart_toStartOf="@+id/view8"
+                    app:layout_constraintTop_toTopOf="@+id/view8"
+                    app:layout_constraintWidth_percent="0.2"
+                    app:srcCompat="@drawable/___5_" />
+
+                <ImageView
+                    android:id="@+id/imageView_radmomaizer_of_mood"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/image_radius"
+                    android:clipToOutline="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/view7"
+                    app:layout_constraintEnd_toEndOf="@+id/view7"
+                    app:layout_constraintHeight_percent="0.059"
+                    app:layout_constraintStart_toStartOf="@+id/view7"
+                    app:layout_constraintTop_toTopOf="@+id/view7"
+                    app:layout_constraintWidth_percent="0.2"
+                    app:srcCompat="@drawable/___7_" />
+
                 <Button
                     android:id="@+id/button_test"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginTop="12dp"
                     android:background="@drawable/color_for_buttons"
-                    android:text="Зрада/перемога"
+                    android:text="Тест на потужність"
                     android:textColor="#090909"
                     app:layout_constraintEnd_toEndOf="@+id/view"
                     app:layout_constraintHeight_percent="0.05"
@@ -206,6 +351,23 @@
                     app:layout_constraintStart_toStartOf="@+id/view"
                     app:layout_constraintTop_toBottomOf="@+id/textView9"
                     app:layout_constraintWidth_percent="0.6" />
+
+                <Button
+                    android:id="@+id/button_more_details"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/color_for_buttons"
+                    android:text="Докладніше"
+                    android:textAllCaps="false"
+                    android:textColor="#0D0D0D"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view9"
+                    app:layout_constraintEnd_toEndOf="@+id/view9"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintStart_toStartOf="@+id/view9"
+                    app:layout_constraintTop_toTopOf="@+id/view9"
+                    app:layout_constraintVertical_bias="0.100000024"
+                    app:layout_constraintWidth_percent="0.5" />
 
                 <View
                     android:id="@+id/view2"
@@ -232,6 +394,41 @@
                     app:layout_constraintTop_toBottomOf="@+id/button_zrd"
                     app:layout_constraintWidth_percent="0.7" />
 
+                <Button
+                    android:id="@+id/button_about_app"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/color_for_buttons"
+                    android:text="Про застосунок"
+                    android:textAllCaps="false"
+                    android:textColor="#090909"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view9"
+                    app:layout_constraintEnd_toEndOf="@+id/view9"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintStart_toStartOf="@+id/view9"
+                    app:layout_constraintTop_toTopOf="@+id/view9"
+                    app:layout_constraintWidth_percent="0.5" />
+
+                <Button
+                    android:id="@+id/button_about_developer"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/color_for_buttons"
+                    android:text="Про розробника"
+                    android:textAllCaps="false"
+                    android:textColor="#090909"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view9"
+                    app:layout_constraintEnd_toEndOf="@+id/view9"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintHorizontal_bias="0.487"
+                    app:layout_constraintStart_toStartOf="@+id/view9"
+                    app:layout_constraintTop_toTopOf="@+id/view9"
+                    app:layout_constraintVertical_bias="0.9"
+                    app:layout_constraintWidth_percent="0.5" />
+
                 <View
                     android:id="@+id/view4"
                     android:layout_width="0dp"
@@ -243,6 +440,52 @@
                     app:layout_constraintStart_toStartOf="@+id/view"
                     app:layout_constraintTop_toBottomOf="@+id/button_zrd_ptzhn"
                     app:layout_constraintWidth_percent="0.7" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Чіломометр"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view6"
+                    app:layout_constraintEnd_toEndOf="@+id/view6"
+                    app:layout_constraintHorizontal_bias="0.06"
+                    app:layout_constraintStart_toStartOf="@+id/view6"
+                    app:layout_constraintTop_toBottomOf="@+id/view5"
+                    app:layout_constraintVertical_bias="0.421" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="Крінжомометр"
+                    android:textColor="#F8F6F6"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view6"
+                    app:layout_constraintEnd_toEndOf="@+id/view6"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="@+id/view6"
+                    app:layout_constraintTop_toBottomOf="@+id/view5"
+                    app:layout_constraintVertical_bias="0.411" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="89dp"
+                    android:layout_height="31dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="Рандомайзер настрою"
+                    android:textColor="#F8F6F6"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view6"
+                    app:layout_constraintEnd_toEndOf="@+id/view6"
+                    app:layout_constraintHorizontal_bias="0.91"
+                    app:layout_constraintStart_toStartOf="@+id/view6"
+                    app:layout_constraintTop_toBottomOf="@+id/view5"
+                    app:layout_constraintVertical_bias="0.411" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
