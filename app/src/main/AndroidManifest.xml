@@ -12,9 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Potuzhnomometr">
         <activity
+            android:name=".Zrada_or_Peremoga"
+            android:exported="false" />
+        <activity
             android:name=".Zradomometr"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Potuzhnomometr"
             android:exported="true"
