@@ -140,7 +140,7 @@
         app:layout_constraintHeight_percent="0.04"
         app:layout_constraintStart_toStartOf="@+id/view35"
         app:layout_constraintTop_toTopOf="@+id/view35"
-        app:layout_constraintWidth_percent="0.4" />
+        app:layout_constraintWidth_percent="0.42" />
 
     <View
         android:id="@+id/view47"
@@ -156,6 +156,18 @@
         app:layout_constraintWidth_percent="0.82" />
 
     <View
+        android:id="@+id/view37"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded3"
+        app:layout_constraintBottom_toBottomOf="@+id/view47"
+        app:layout_constraintEnd_toEndOf="@+id/view47"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="@+id/view47"
+        app:layout_constraintTop_toTopOf="@+id/view47"
+        app:layout_constraintWidth_percent="0.75" />
+
+    <View
         android:id="@+id/view50"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -165,7 +177,7 @@
         app:layout_constraintHeight_percent="0.08"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/view47"
-        app:layout_constraintVertical_bias="0.86"
+        app:layout_constraintVertical_bias="0.9"
         app:layout_constraintWidth_percent="0.18" />
 
     <View
@@ -185,13 +197,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/rounded4"
-        app:layout_constraintBottom_toBottomOf="@+id/view35"
-        app:layout_constraintEnd_toEndOf="@+id/view35"
+        app:layout_constraintBottom_toBottomOf="@+id/view37"
+        app:layout_constraintEnd_toEndOf="@+id/view37"
         app:layout_constraintHeight_percent="0.03"
-        app:layout_constraintHorizontal_bias="0.909"
-        app:layout_constraintStart_toStartOf="@+id/view35"
-        app:layout_constraintTop_toTopOf="@+id/view35"
-        app:layout_constraintVertical_bias="0.144"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="@+id/view37"
+        app:layout_constraintTop_toTopOf="@+id/view37"
+        app:layout_constraintVertical_bias="0.057"
         app:layout_constraintWidth_percent="0.0675" />
 
     <View
@@ -199,13 +211,13 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/rounded_view"
-        app:layout_constraintBottom_toBottomOf="@+id/view35"
-        app:layout_constraintEnd_toEndOf="@+id/view35"
+        app:layout_constraintBottom_toBottomOf="@+id/view37"
+        app:layout_constraintEnd_toEndOf="@+id/view37"
         app:layout_constraintHeight_percent="0.03"
-        app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="@+id/view35"
-        app:layout_constraintTop_toTopOf="@+id/view35"
-        app:layout_constraintVertical_bias="0.144"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@+id/view37"
+        app:layout_constraintTop_toTopOf="@+id/view37"
+        app:layout_constraintVertical_bias="0.060000002"
         app:layout_constraintWidth_percent="0.0675" />
 
     <View
@@ -254,14 +266,12 @@
         android:id="@+id/imageView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view35"
-        app:layout_constraintEnd_toEndOf="@+id/view35"
-        app:layout_constraintHeight_percent="0.25"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="@+id/view35"
-        app:layout_constraintTop_toTopOf="@+id/view35"
-        app:layout_constraintVertical_bias="0.19999999"
-        app:layout_constraintWidth_percent="0.78"
+        app:layout_constraintBottom_toBottomOf="@+id/view37"
+        app:layout_constraintEnd_toEndOf="@+id/view37"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="@+id/view37"
+        app:layout_constraintTop_toTopOf="@+id/view37"
+        app:layout_constraintWidth_percent="0.6"
         app:srcCompat="@drawable/chatgpt_image_27___2025____21_34_05__1___1___1_" />
 
     <ImageView
@@ -326,7 +336,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Версія: Zrd/Ptzhn 1.0"
+        android:text="Модель: Zrd/Ptzhn 1.0"
         android:textColor="#FDFAFA"
         app:layout_constraintBottom_toBottomOf="@+id/view35"
         app:layout_constraintEnd_toEndOf="@+id/view35"
@@ -367,10 +377,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@+id/view50"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintHeight_percent="0.18"
+        app:layout_constraintHeight_percent="0.145"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/view47"
-        app:layout_constraintVertical_bias="0.51"
+        app:layout_constraintVertical_bias="0.58000004"
         app:layout_constraintWidth_percent="0.2"
         app:srcCompat="@drawable/chatgpt_image_28___2025____09_50_35__1___1_" />
 

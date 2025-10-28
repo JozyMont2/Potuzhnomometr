@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@android:color/transparent">
+
+        <View
+            android:id="@+id/view33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Вибір режима"
+            android:textColor="#FDFBFB"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.031" />
+
+        <View
+            android:id="@+id/view26"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.100000024"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <View
+            android:id="@+id/view27"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/mods_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view26"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <View
+            android:id="@+id/view28"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/mods_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view27"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <View
+            android:id="@+id/view29"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/mods_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view28"
+            app:layout_constraintVertical_bias="0.324"
+            app:layout_constraintWidth_percent="0.9" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="285dp"
+            android:layout_height="75dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="При натисканні на червону кнопку, стрілка рандомно вказує на зраду або перемогу."
+            android:textColor="#FDFCFC"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view27"
+            app:layout_constraintEnd_toEndOf="@+id/view27"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/view27"
+            app:layout_constraintTop_toTopOf="@+id/view27"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView_closewindow2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintHorizontal_bias="0.956"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.051"
+            app:layout_constraintWidth_percent="0.1"
+            app:srcCompat="@drawable/icons8___50" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="285dp"
+            android:layout_height="75dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="З'являється додаткова зелена кнопка. При натисканні на червону кнопку, стрілка буде вказувати на зраду. При натисканні на зелену кнопку, стрілка буде вказувати на перемогу."
+            android:textColor="#FDFCFC"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view28"
+            app:layout_constraintEnd_toEndOf="@+id/view28"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="@+id/view28"
+            app:layout_constraintTop_toTopOf="@+id/view28"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="285dp"
+            android:layout_height="75dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="При натисканні на червону кнопку, стрілка буде по черзі вказувати на зраду або перемогу."
+            android:textColor="#FDFCFC"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view29"
+            app:layout_constraintEnd_toEndOf="@+id/view29"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="@+id/view29"
+            app:layout_constraintTop_toTopOf="@+id/view29"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonmode_ytumannya"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/color_for_buttons"
+            android:text="Рандом"
+            app:layout_constraintBottom_toBottomOf="@+id/view27"
+            app:layout_constraintEnd_toEndOf="@+id/view27"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/view27"
+            app:layout_constraintTop_toBottomOf="@+id/textView27"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <Button
+            android:id="@+id/buttonmode_random"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/color_for_buttons"
+            android:text="Ручний"
+            app:layout_constraintBottom_toBottomOf="@+id/view28"
+            app:layout_constraintEnd_toEndOf="@+id/view28"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/view28"
+            app:layout_constraintTop_toBottomOf="@+id/textView28"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <Button
+            android:id="@+id/buttonmode_rychnuy"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/color_for_buttons"
+            android:text="Послідовність"
+            app:layout_constraintBottom_toBottomOf="@+id/view29"
+            app:layout_constraintEnd_toEndOf="@+id/view29"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toStartOf="@+id/view29"
+            app:layout_constraintTop_toBottomOf="@+id/textView29"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
