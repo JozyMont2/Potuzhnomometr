@@ -165,7 +165,7 @@ class Zradomometr : AppCompatActivity() {
                 dialog.dismiss()
             }
 
-            dialogView.findViewById<Button>(R.id.buttonmode_ytumannya).setOnClickListener {
+            dialogView.findViewById<Button>(R.id.buttonmode_hold).setOnClickListener {
                 setMode(Zradomometr.Mode.HOLD, "Утримання", dialog)
             }
 
@@ -173,7 +173,7 @@ class Zradomometr : AppCompatActivity() {
                 setMode(Zradomometr.Mode.RANDOM, "Рандом", dialog)
             }
 
-            dialogView.findViewById<Button>(R.id.buttonmode_rychnuy).setOnClickListener {
+            dialogView.findViewById<Button>(R.id.buttonmode_manual).setOnClickListener {
                 setMode(Zradomometr.Mode.MANUAL, "Ручний", dialog)
             }
 

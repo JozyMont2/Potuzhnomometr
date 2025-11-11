@@ -13,7 +13,8 @@
         android:theme="@style/Theme.Potuzhnomometr">
         <activity
             android:name=".Zrada_or_Peremoga"
-            android:exported="false" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Zradomometr"
             android:exported="true"

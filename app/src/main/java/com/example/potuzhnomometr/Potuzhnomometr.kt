@@ -161,7 +161,7 @@ class Potuzhnomometr : AppCompatActivity() {
                 dialog.dismiss()
             }
 
-            dialogView.findViewById<Button>(R.id.buttonmode_ytumannya).setOnClickListener {
+            dialogView.findViewById<Button>(R.id.buttonmode_hold).setOnClickListener {
                 setMode(Mode.HOLD, "Утримання", dialog)
             }
 
@@ -169,7 +169,7 @@ class Potuzhnomometr : AppCompatActivity() {
                 setMode(Mode.RANDOM, "Рандом", dialog)
             }
 
-            dialogView.findViewById<Button>(R.id.buttonmode_rychnuy).setOnClickListener {
+            dialogView.findViewById<Button>(R.id.buttonmode_manual).setOnClickListener {
                 setMode(Mode.MANUAL, "Ручний", dialog)
             }
 

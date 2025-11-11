@@ -40,6 +40,12 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
+        zrd_ptzhn.setOnClickListener {
+            val intentThree = Intent(this, Zrada_or_Peremoga::class.java)
+            startActivity(intentThree)
+            finish()
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
