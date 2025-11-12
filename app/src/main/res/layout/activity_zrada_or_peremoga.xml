@@ -16,10 +16,10 @@
         app:layout_constraintBottom_toTopOf="@+id/view35"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.18"
-        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.874"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75"
+        app:layout_constraintVertical_bias="0.82"
         app:layout_constraintWidth_percent="0.38"
         app:srcCompat="@drawable/___13_" />
 
@@ -238,7 +238,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
-        android:text="Рандомайзер зрада💀/перемога⚡"
+        android:text="Рандомайзер Зрада💀/Перемога⚡"
         android:textColor="#FDFBFB"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/view50"
@@ -341,7 +341,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2"
         app:layout_constraintVertical_bias="1.0"
-        app:layout_constraintWidth_percent="0.14" />
+        app:layout_constraintWidth_percent="0.135" />
 
     <View
         android:id="@+id/view_zrada_or_peremoga"
@@ -407,7 +407,7 @@
         app:layout_constraintHeight_percent="0.12"
         app:layout_constraintStart_toStartOf="@+id/view47"
         app:layout_constraintTop_toTopOf="@+id/view47"
-        app:layout_constraintWidth_percent="0.28" />
+        app:layout_constraintWidth_percent="0.265" />
 
     <Button
         android:id="@+id/button_green"
@@ -420,6 +420,6 @@
         app:layout_constraintHeight_percent="0.12"
         app:layout_constraintStart_toStartOf="@+id/viewbg_for_greenbutton"
         app:layout_constraintTop_toTopOf="@+id/viewbg_for_greenbutton"
-        app:layout_constraintWidth_percent="0.28" />
+        app:layout_constraintWidth_percent="0.265" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
